@@ -1,0 +1,164 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Book Sales management API",
+        "description": "API for booksales management",
+        "version": "0.0.1"
+    },
+    "paths": {
+        "/api/authors": {
+            "get": {
+                "summary": "List authors",
+                "description": "Returns the complete author list from the table 'authors' ",
+                "operationId": "b1de4facd6962392c6fde61f8a7b097a",
+                "responses": {
+                    "200": {
+                        "description": "List of authors",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "nombres": {
+                                                "type": "string",
+                                                "example": "Joyanes Aguilar, Luis"
+                                            },
+                                            "created_at": {
+                                                "type": "string",
+                                                "example": "2023-10-11T07:26:20.000000Z"
+                                            },
+                                            "updated_at": {
+                                                "type": "string",
+                                                "example": "2023-10-11T07:26:22.000000Z"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Something went wrong"
+                    }
+                }
+            }
+        },
+        "/api/author/{id}": {
+            "get": {
+                "summary": "get author details",
+                "description": "Returns the complete author detaild based on Id ",
+                "operationId": "f5da13c0fe7f7b4671318c86ce983ab9",
+                "responses": {
+                    "200": {
+                        "description": "Detail of author",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "nombres": {
+                                                "type": "string",
+                                                "example": "Joyanes Aguilar, Luis"
+                                            },
+                                            "created_at": {
+                                                "type": "string",
+                                                "example": "2023-10-11T07:26:20.000000Z"
+                                            },
+                                            "updated_at": {
+                                                "type": "string",
+                                                "example": "2023-10-11T07:26:22.000000Z"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Something went wrong"
+                    }
+                }
+            }
+        },
+        "/api/books": {
+            "get": {
+                "summary": "List books",
+                "description": "Returns the complete product list from the table 'books' ",
+                "operationId": "9017a3fa89d6636329067c858b27a6fa",
+                "responses": {
+                    "200": {
+                        "description": "List of books",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "isbn": {
+                                                "type": "string",
+                                                "example": "23-1794-01"
+                                            },
+                                            "titulo": {
+                                                "type": "string",
+                                                "example": "The nice book for sleep"
+                                            },
+                                            "year": {
+                                                "type": "integer",
+                                                "example": "2099"
+                                            },
+                                            "precio": {
+                                                "type": "number",
+                                                "format": "decimal",
+                                                "example": "3.99"
+                                            },
+                                            "cantidad": {
+                                                "type": "integer",
+                                                "example": "2"
+                                            },
+                                            "created_at": {
+                                                "type": "string",
+                                                "example": "2023-10-11T07:26:20.000000Z"
+                                            },
+                                            "updated_at": {
+                                                "type": "string",
+                                                "example": "2023-10-11T07:26:22.000000Z"
+                                            },
+                                            "editorial_id": {
+                                                "type": "integer",
+                                                "example": "2"
+                                            },
+                                            "author_id": {
+                                                "type": "integer",
+                                                "example": "3"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Something went wrong"
+                    }
+                }
+            }
+        }
+    }
+}
